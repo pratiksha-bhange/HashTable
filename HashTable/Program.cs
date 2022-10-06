@@ -1,11 +1,14 @@
-﻿using System;
+﻿using HashTable;
+using System;
 
-namespace HashTable
+namespace Hash_Table
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to Hash Table Programs");
+
             int key = 0;
             string sampleParagraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
             string[] paragraph = sampleParagraph.Split(" ");
@@ -15,6 +18,7 @@ namespace HashTable
                 hash.Add(key, word);
                 key++;
             }
+            hash.Remove(9);
             for (key = 0; key < paragraph.Length; key++)
             {
                 string value = hash.Get(key);
